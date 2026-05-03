@@ -74,21 +74,15 @@ echo "💡 提示：請重啟系統以完全釋放資源：sudo reboot"
 ```
 
 ## 3. 維護與檢查工具
-優化後，可以使用以下指令確保系統維持簡潔：
-
-檢查開機耗時： systemd-analyze blame
-
-查看套件空間佔用： dpigs -n 10 (需安裝 debian-goodies)
-
-確認 Docker 狀態： docker info (移除 AppArmor 後會出現警告，但不影響運作)
+- 優化後，可以使用以下指令確保系統維持簡潔：
+- 檢查開機耗時： systemd-analyze blame
+- 查看套件空間佔用： dpigs -n 10 (需安裝 debian-goodies)
+- 確認 Docker 狀態： docker info (移除 AppArmor 後會出現警告，但不影響運作)
 
 
 ## 4. 常見問答 (FAQ)
-移除 AppArmor 會影響 Docker 嗎？
-
-Docker 預設會利用 AppArmor 強化隔離。移除後安全性會略微下降，但對個人實體主機而言，效能提升與權限管理較為方便。
-
-移除後可以恢復嗎？
-
-可以，隨時透過 sudo apt install <套件名> 重新裝回。
+- 移除 AppArmor 會影響 Docker 嗎？
+- Docker 預設會利用 AppArmor 強化隔離。移除後安全性會略微下降，但對個人實體主機而言，效能提升與權限管理較為方便。
+- 移除後可以恢復嗎？
+- 可以，隨時透過 sudo apt install <套件名> 重新裝回。
 
